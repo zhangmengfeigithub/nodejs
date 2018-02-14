@@ -1,0 +1,11 @@
+const http=require('http');
+const urllib =require('url')
+http.createServer(function (req, res){
+var obj =urllib.parse(req.url,true)
+var url=obj.pathname;
+var GET=obj.query;
+console.log(url, GET);
+  //req获取前台请求数据
+  res.write('aaa');
+  res.end();
+}).listen(8088);
